@@ -1,0 +1,55 @@
+{
+    "DISPENSERS":{	
+      "DISPENSERS": "Dispensers",		
+      "ID": "ID",
+      "NAME": "Name",
+      "LOCATION": "Location",
+      "TEMPERATURE": "Storage Temperature",
+      "DEGREES": "Show degrees Fahrenheit",
+      "GREETING": "Welcome back",
+      "CREATE": "Create"
+    },
+    "USERS":{
+        "USERS": "Users",			
+        "ID": "ID",
+        "NAME": "Name",
+        "SURNAME": "Surname",
+        "AGE": "Age",
+        "EMAIL": "Email",
+        "ROLE": "Role",
+        "PATIENTS": "Patients",
+        "PATIENTINFO": "Patient Information",
+        "MOREINFO": "More info"
+    },
+    "MEDICINES":{
+        "MEDICINES": "Medicines",
+        "ID": "ID",
+        "TITLE": "Title",
+        "DESCRIPTION": "Description"
+    },
+    "STOCKS":{
+        "STOCKS": "Stocks",
+        "ID": "ID",
+        "DISPENSERID": "Dispenser Id",
+        "MEDICINEID": "Medicine",
+        "QUANTITY": "Quantity"
+    },
+    "PRESCRIPTIONS":{
+        "PRESCRIPTIONS": "Medical Prescriptions",
+        "ID": "ID",
+        "DOSE": "Dose",
+        "TIMES": "Times Pper Day",
+        "START": "Start date",
+        "END": "End date",
+        "ADD": "Add New Prescription",
+        "MOREINFO": "Information about receiving medication"
+    },
+    "STATISTICS":{
+        "STATISTIC": "Patient Statistics",
+        "TOTAL": "Total Taken Doses",
+        "EXPECTED": "Expected Total Doses",
+        "MISSED": "Missed Doses",
+        "NOINFO": "No info yet",
+        "PERCENTAGE": "Percentage Of Medicine Taken"
+    }
+}

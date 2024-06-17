@@ -1,0 +1,34 @@
+  <div class="container">
+    <div class="card">
+      <h1>Create New Prescription</h1>
+          <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+            
+            <select id="medicine" formControlName="medicine">
+                <option *ngFor="let medicine of medicines" [value]="medicine.title" [ngValue]="medicine">{{ medicine.title }}</option>
+            </select>
+  
+            <input type="number" id="dose" formControlName="dose" placeholder="Dose" />
+            <div *ngIf="dose?.invalid && (dose?.dirty || dose?.touched)">
+                <div *ngIf="dose?.errors?.['required']">Dose is required.</div>
+            </div>
+
+            <input type="number" id="timesPerDay" formControlName="timesPerDay" placeholder="Times Per Day" />
+            <div *ngIf="timesPerDay?.invalid && (timesPerDay?.dirty || timesPerDay?.touched)">
+                <div *ngIf="timesPerDay?.errors?.['required']">Times Per Day is required.</div>
+            </div>
+
+            <input type="date" id="prescriptionDateStart" formControlName="prescriptionDateStart" placeholder="Date Start" />
+            <div *ngIf="prescriptionDateStart?.invalid && (prescriptionDateStart?.dirty || prescriptionDateStart?.touched)">
+                <div *ngIf="prescriptionDateStart?.errors?.['required']">Date Start is required.</div>
+            </div>
+
+            <input type="date" id="prescriptionDateEnd" formControlName="prescriptionDateEnd" placeholder="Date End" />
+            <div *ngIf="prescriptionDateEnd?.invalid && (prescriptionDateEnd?.dirty || prescriptionDateEnd?.touched)">
+                <div *ngIf="prescriptionDateEnd?.errors?.['required']">Date End is required.</div>
+            </div>
+            
+              <button type="submit" [disabled]="createForm.invalid">Submit</button>
+          </form>
+    </div>
+
+  </div>

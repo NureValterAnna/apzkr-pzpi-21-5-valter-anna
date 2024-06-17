@@ -1,0 +1,36 @@
+<div class="sidebar">
+    <div class="user">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 13C14.9882 13 16.6 11.3883 16.6 9.40005C16.6 7.41182 14.9882 5.80005 13 5.80005C11.0118 5.80005 9.39999 7.41182 9.39999 9.40005C9.39999 11.3883 11.0118 13 13 13Z" stroke="#F8BC46" stroke-width="2"/>
+            <path d="M13 25C19.6274 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13C1 19.6274 6.37258 25 13 25Z" stroke="#F8BC46" stroke-width="2"/>
+            <path d="M20.1629 22.6001C19.972 19.1303 18.9096 16.6001 12.9999 16.6001C7.09025 16.6001 6.02789 19.1303 5.83691 22.6001" stroke="#F8BC46" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <p>{{ 'DISPENSERS.GREETING' | translate }}, {{name}}!</p>
+        <svg (click)="logout()" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.40225 7C9.41678 4.38996 9.53252 2.97647 10.4546 2.05442C11.509 1 13.206 1 16.6001 1H17.8001C21.1941 1 22.8913 1 23.9456 2.05442C25 3.10883 25 4.80588 25 8.2V17.8C25 21.1941 25 22.8911 23.9456 23.9456C22.8913 25 21.1941 25 17.8001 25H16.6001C13.206 25 11.509 25 10.4546 23.9456C9.53252 23.0235 9.41678 21.61 9.40225 19" stroke="#F84646" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16.5998 12.9999H1M1 12.9999L5.19996 9.3999M1 12.9999L5.19996 16.5999" stroke="#F84646" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+    <div class="tabs">
+        <a class="tab" routerLink="/patient/prescriptions" routerLinkActive="active"> 
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 25H25" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19 1H7C3.4 1 2.2 3.148 2.2 5.8V25H23.8V5.8C23.8 3.148 22.6 1 19 1Z" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.472 16.6H10.516C9.90399 16.6 9.388 17.104 9.388 17.728V25H16.588V17.728C16.6 17.104 16.096 16.6 15.472 16.6Z" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 5.80005V11.8" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 8.79993H16" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            {{ 'PRESCRIPTIONS.PRESCRIPTIONS' | translate }}
+        </a>
+        <a class="tab" routerLink="/patient/medicines" routerLinkActive="active">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 25H25" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19 1H7C3.4 1 2.2 3.148 2.2 5.8V25H23.8V5.8C23.8 3.148 22.6 1 19 1Z" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.472 16.6H10.516C9.90399 16.6 9.388 17.104 9.388 17.728V25H16.588V17.728C16.6 17.104 16.096 16.6 15.472 16.6Z" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 5.80005V11.8" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 8.79993H16" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            {{ 'MEDICINES.MEDICINES' | translate }}
+        </a>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+    <table>
+      <thead>
+        <tr>
+          <td>{{ 'MEDICINES.TITLE' | translate }}</td>
+          <td>{{ 'MEDICINES.DESCRIPTION' | translate }}</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let medicine of medicines">
+          <td>{{ medicine.title }}</td>
+          <td>{{ medicine.description }}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  
+  

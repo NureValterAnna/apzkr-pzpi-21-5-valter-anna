@@ -1,0 +1,22 @@
+<div class="container">
+  <div *ngIf="isInfo; else noInfoTemplate" class="patient-stats"> 
+    <h2>{{ 'STATISTICS.STATISTIC' | translate }}</h2>
+    <div class="patient-info">
+      <p><strong>{{ 'USERS.NAME' | translate }}:</strong> {{ medicineIntakeInformation?.name }}</p>
+      <p><strong>{{ 'USERS.SURNAME' | translate }}:</strong> {{ medicineIntakeInformation?.surname }}</p>
+      <p><strong>{{ 'MEDICINES.TITLE' | translate }}:</strong> {{ prescription?.medicine?.title }}</p>
+    </div>
+    <div class="doses-info">
+      <p><strong>{{ 'STATISTICS.TOTAL' | translate }}:</strong> {{ medicineIntakeInformation?.totalTakenDoses }}</p>
+      <p><strong>{{ 'STATISTICS.EXPECTED' | translate }}:</strong> {{ medicineIntakeInformation?.expectedTotalDoses }}</p>
+      <p><strong>{{ 'STATISTICS.MISSED' | translate }}:</strong> {{ medicineIntakeInformation?.missedDoses }}</p>
+    </div>
+</div>
+</div>
+
+<ng-template #noInfoTemplate>
+  <div class="no-info">
+        <h2>{{ 'STATISTICS.NOINFO' | translate }}</h2>
+    </div>
+</ng-template>
+  

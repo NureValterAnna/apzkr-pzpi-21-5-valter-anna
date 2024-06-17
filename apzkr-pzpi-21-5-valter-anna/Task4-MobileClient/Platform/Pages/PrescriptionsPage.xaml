@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:viewModels="clr-namespace:Platform.ViewModels"
+             xmlns:entities="clr-namespace:Domain.Entities;assembly=Domain"
+             x:Class="Platform.Pages.PrescriptionsPage"
+             Title="Prescriptions"
+             x:DataType="viewModels:PrescriptionPageVM"
+             BackgroundColor="#DBF8FF">
+    
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior Command="{Binding Init}"
+                                        EventName="Appearing" />
+    </ContentPage.Behaviors>
+    
+    <StackLayout>
+        <StackLayout x:Name="StockPage" IsVisible="{Binding PrescriptionSelected}">
+            <ListView ItemsSource="{Binding MedicineStocks}"
+                      SelectionMode="Single"
+                      RowHeight="175">
+                <ListView.Behaviors>
+                    <toolkit:EventToCommandBehavior Command="{Binding SelectStock}"
+                        x:TypeArguments="SelectedItemChangedEventArgs"
+                        EventName="ItemSelected" />
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="entities:MedicineStock">
+                        <ViewCell>
+                            <Border
+                                BackgroundColor="#CEEFF5"
+                                Margin="20"
+                                HorizontalOptions="Center"
+                                WidthRequest="400"
+                                Padding="20"
+                                StrokeShape="RoundRectangle 10,10,10,10"
+                                Stroke="#CEEFF5">
+                                <StackLayout VerticalOptions="FillAndExpand">
+                                    <Label
+                                        TextColor="#39B5DB"
+                                        Text="{Binding MedicineTitle, StringFormat='Medicine: {0}'}"
+                                        FontSize="24"
+                                        FontAttributes="Bold"/>
+                                    <Label TextColor="#0A1716" Text="{Binding DispenserName, StringFormat='Times per day: {0}'}" />
+                                    <Label TextColor="#0A1716" Text="{Binding Quantity, StringFormat='Dose: {0}'}" />
+                                </StackLayout>
+                            </Border>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <Button Margin="0, 15"
+                    Command="{Binding MedicineIntake}"
+                    Text="Get Pill" />
+            
+            <Button Margin="0, 15"
+                    Command="{Binding GetBack}"
+                    Text="Back to list" />
+        </StackLayout>
+        
+        <StackLayout x:Name="PrescriptionPage" IsVisible="{Binding PrescriptionNotSelected}">
+            <Label x:Name="PrescriptionsHeader"></Label>
+            <ListView ItemsSource="{Binding Prescriptions}"
+                      SelectionMode="Single"
+                      RowHeight="175">
+                <ListView.Behaviors>
+                    <toolkit:EventToCommandBehavior Command="{Binding SelectPrescription}"
+                                                    x:TypeArguments="SelectedItemChangedEventArgs"
+                                                    EventName="ItemSelected" />
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="entities:Prescription">
+                        <ViewCell>
+                            <Frame 
+                                BackgroundColor="#CEEFF5"
+                                Margin="20"
+                                HorizontalOptions="Center"
+                                WidthRequest="400"
+                                BorderColor="#CEEFF5">
+                                <StackLayout VerticalOptions="FillAndExpand">
+                                    <Label 
+                                        TextColor="#39B5DB" 
+                                        Text="{Binding Medicine.Title, StringFormat='Medicine: {0}'}"
+                                        FontSize="24"
+                                        FontAttributes="Bold"/>
+                                    <Label TextColor="#0A1716" Text="{Binding TimesPerDay, StringFormat='Times per day: {0}'}" />
+                                    <Label TextColor="#0A1716" Text="{Binding Dose, StringFormat='Dose: {0}'}" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                   
+            <Button Text="Logout"
+                    Command="{Binding Logout}">
+            </Button>
+        </StackLayout>
+ 
+    </StackLayout>
+</ContentPage>

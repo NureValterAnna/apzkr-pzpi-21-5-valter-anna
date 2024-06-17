@@ -1,0 +1,61 @@
+<div class="sidebar">
+    <div class="user">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 13C14.9882 13 16.6 11.3883 16.6 9.40005C16.6 7.41182 14.9882 5.80005 13 5.80005C11.0118 5.80005 9.39999 7.41182 9.39999 9.40005C9.39999 11.3883 11.0118 13 13 13Z" stroke="#F8BC46" stroke-width="2"/>
+            <path d="M13 25C19.6274 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13C1 19.6274 6.37258 25 13 25Z" stroke="#F8BC46" stroke-width="2"/>
+            <path d="M20.1629 22.6001C19.972 19.1303 18.9096 16.6001 12.9999 16.6001C7.09025 16.6001 6.02789 19.1303 5.83691 22.6001" stroke="#F8BC46" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <p> {{ 'DISPENSERS.GREETING' | translate }} , {{name}}!</p>
+        <svg (click)="logout()" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.40225 7C9.41678 4.38996 9.53252 2.97647 10.4546 2.05442C11.509 1 13.206 1 16.6001 1H17.8001C21.1941 1 22.8913 1 23.9456 2.05442C25 3.10883 25 4.80588 25 8.2V17.8C25 21.1941 25 22.8911 23.9456 23.9456C22.8913 25 21.1941 25 17.8001 25H16.6001C13.206 25 11.509 25 10.4546 23.9456C9.53252 23.0235 9.41678 21.61 9.40225 19" stroke="#F84646" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16.5998 12.9999H1M1 12.9999L5.19996 9.3999M1 12.9999L5.19996 16.5999" stroke="#F84646" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+    <div class="tabs">
+        <a class="tab" routerLink="/admin/dispensers" routerLinkActive="active"> 
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 25H25" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19 1H7C3.4 1 2.2 3.148 2.2 5.8V25H23.8V5.8C23.8 3.148 22.6 1 19 1Z" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.472 16.6H10.516C9.90399 16.6 9.388 17.104 9.388 17.728V25H16.588V17.728C16.6 17.104 16.096 16.6 15.472 16.6Z" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 5.80005V11.8" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 8.79993H16" stroke="#F8BC46" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            {{ 'DISPENSERS.DISPENSERS' | translate }}
+        </a>
+        <a class="tab" routerLink="/admin/medicines" routerLinkActive="active">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.8 9.99998C11.8 8.618 11.2729 7.23602 10.2184 6.1816C8.10955 4.07277 4.69046 4.07277 2.58163 6.1816C1.52721 7.23602 1 8.618 1 9.99998M11.8 9.99998C11.8 11.382 11.2729 12.7639 10.2184 13.8184C8.10955 15.9272 4.69046 15.9272 2.58163 13.8184C1.52721 12.7639 1 11.382 1 9.99998M11.8 9.99998H1" stroke="#F8BC46" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16.3089 7.14559C17.7147 8.55148 19.9941 8.55148 21.4 7.14559C22.103 6.44264 22.4545 5.52133 22.4545 4.6C22.4545 3.67868 22.103 2.75736 21.4 2.05441C19.9941 0.648529 17.7147 0.648529 16.3089 2.05441C15.6059 2.75736 15.2545 3.67868 15.2545 4.6C15.2545 5.52133 15.6059 6.44264 16.3089 7.14559Z" stroke="#F8BC46" stroke-width="2" stroke-linecap="round"/>
+                <path d="M23.6863 19.4572C25.4379 17.7056 25.4379 14.8655 23.6863 13.1138C21.9345 11.3621 19.0945 11.3621 17.3428 13.1138L13.1138 17.3428C11.3621 19.0945 11.3621 21.9345 13.1138 23.6863C14.8655 25.4379 17.7056 25.4379 19.4572 23.6863L23.6863 19.4572Z" stroke="#F8BC46" stroke-width="2"/>
+                <path d="M15.4 15.4C15.4 15.4 15.7376 17.1515 17.6932 19.1071C19.6489 21.0627 21.4 21.4 21.4 21.4" stroke="#F8BC46" stroke-width="2"/>
+            </svg>
+            {{ 'MEDICINES.MEDICINES' | translate }}
+        </a>
+        <a class="tab" routerLink="/admin/users" routerLinkActive="active">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.84211 11.1053C12.6326 11.1053 14.8947 8.84312 14.8947 6.05263C14.8947 3.26214 12.6326 1 9.84211 1C7.05161 1 4.78947 3.26214 4.78947 6.05263C4.78947 8.84312 7.05161 11.1053 9.84211 11.1053Z" stroke="#F8BC46" stroke-width="2"/>
+                <path d="M17.4211 9.84213C19.514 9.84213 21.2105 8.14552 21.2105 6.05266C21.2105 3.95979 19.514 2.26318 17.4211 2.26318" stroke="#F8BC46" stroke-width="2" stroke-linecap="round"/>
+                <path d="M9.8421 25C14.7255 25 18.6842 22.7379 18.6842 19.9474C18.6842 17.1569 14.7255 14.8948 9.8421 14.8948C4.95875 14.8948 1 17.1569 1 19.9474C1 22.7379 4.95875 25 9.8421 25Z" stroke="#F8BC46" stroke-width="2"/>
+                <path d="M21.2105 16.1578C23.4264 16.6438 25 17.8743 25 19.3157C25 20.6159 23.7195 21.7447 21.8421 22.3099" stroke="#F8BC46" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            {{ 'USERS.USERS' | translate }}
+        </a>
+        <a class="tab" routerLink="/admin/stocks" routerLinkActive="active">
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.2932 2.65836L23.6932 3.91782C26.2753 5.27279 27.5662 5.95028 28.2831 7.16769C29 8.3851 29 9.9 29 12.9298V13.0702C29 16.1 29 17.615 28.2831 18.8324C27.5662 20.0498 26.2753 20.7272 23.6932 22.0822L21.2932 23.3416C19.1865 24.4472 18.1332 25 17 25C15.8668 25 14.8135 24.4472 12.7067 23.3416L10.3067 22.0822C7.72476 20.7272 6.43375 20.0498 5.71688 18.8324C5 17.615 5 16.1 5 13.0702V12.9298C5 9.9 5 8.3851 5.71688 7.16769C6.43375 5.95028 7.72476 5.27279 10.3067 3.91782L12.7067 2.65836C14.8135 1.55279 15.8668 1 17 1C18.1332 1 19.1865 1.55279 21.2932 2.65836Z" stroke="#F8BC46" stroke-width="2" stroke-linecap="round"/>
+                <path d="M27.8 7.59998L17 13M17 13L6.2 7.59998M17 13V24.4" stroke="#F8BC46" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            {{ 'STOCKS.STOCKS' | translate }}
+        </a>
+    </div>
+</div>
+
+ 
+
+
+
+
+
+
+
+

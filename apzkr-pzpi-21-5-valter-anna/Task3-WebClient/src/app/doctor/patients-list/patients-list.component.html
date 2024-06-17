@@ -1,0 +1,27 @@
+<div class="container">
+      <table>
+        <thead>
+          <tr>
+            <td>{{ 'USERS.NAME' | translate }}</td>
+            <td>{{ 'USERS.SURNAME' | translate }}</td>
+            <td>{{ 'USERS.AGE' | translate }}</td>
+            <td>{{ 'USERS.EMAIL' | translate }}</td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients">
+            <td>{{ patient.name }}</td>
+            <td>{{ patient.surname }}</td>
+            <td>{{ patient.age }}</td>
+            <td>{{ patient.email }}</td>
+            <td>
+                <span class="more-info" (click)="selectPatient(patient.id)">{{ 'USERS.MOREINFO' | translate }}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+    
+    

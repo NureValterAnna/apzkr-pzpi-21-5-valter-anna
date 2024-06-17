@@ -1,0 +1,35 @@
+@import 'src/styles.css';
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.layout {
+  display: flex;
+  height: 100vh; 
+}
+
+.main-content {
+  flex: 1; 
+  background-color: var(--background-color);
+}
+
+.lang-select {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.lang-select option {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.lang-select:focus {
+  border-color: var(--accent-color);
+}

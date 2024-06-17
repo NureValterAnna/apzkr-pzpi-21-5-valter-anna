@@ -1,0 +1,32 @@
+<div class="container">
+    <table>
+      <thead>
+        <tr>
+          <td>{{ 'MEDICINES.TITLE' | translate }}</td>
+          <td>{{ 'PRESCRIPTIONS.DOSE' | translate }}</td>
+          <td>{{ 'PRESCRIPTIONS.TIMES' | translate }}</td>
+          <td>{{ 'PRESCRIPTIONS.START' | translate }}</td>
+          <td>{{ 'PRESCRIPTIONS.END' | translate }}</td>
+          <td>{{ 'STATISTICS.PERCENTAGE' | translate }}</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prescription of prescriptions; let i = index">
+          <td>{{ prescription.medicine?.title }}</td>
+          <td>{{ prescription.dose }}</td>
+          <td>{{ prescription.timesPerDay }}</td>
+          <td>{{ prescription.prescriptionDateStart | date:'dd.MM.yyyy' }}</td>
+          <td>{{ prescription.prescriptionDateEnd | date:'dd.MM.yyyy' }}</td>
+          <td>
+            <div class="progress-container">
+              <div class="progress-bar" [style.width.%]="percentagesOfMedicineTaken[i] || 0"></div>
+              <span class="progress-text">{{ percentagesOfMedicineTaken[i] || 0 | number: '1.0-0'}} %</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  
+  

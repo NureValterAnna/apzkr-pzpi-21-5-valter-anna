@@ -1,0 +1,16 @@
+:root {
+    --text-color: #0A1716;
+    --background-color: #DBF8FF;
+    --primary-color: #39B5DB;
+    --primary-20-color: rgba(57, 181, 219, 0.2);
+    --secondary-color: #9BCDCB;
+    --accent-color: #F8BC46;
+    --danger-color: #F84646;
+    --secondary-20-color: rgba(157, 205, 204, 0.2); 
+    --secondary-30-color: rgba(157, 205, 204, 0.3); 
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

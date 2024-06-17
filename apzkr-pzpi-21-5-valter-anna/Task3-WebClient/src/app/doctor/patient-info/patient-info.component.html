@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="patient-info-container">
+    <div class="patient-details">
+      <h2> {{ 'USERS.PATIENTINFO' | translate }}</h2>
+      <p><strong>{{ 'USERS.NAME' | translate }}:</strong> {{ patient?.name }}</p>
+      <p><strong>{{ 'USERS.SURNAME' | translate }}:</strong> {{ patient?.surname }}</p>
+      <p><strong>{{ 'USERS.AGE' | translate }}:</strong> {{ patient?.age }}</p>
+      <p><strong>{{ 'USERS.EMAIL' | translate }}:</strong> {{ patient?.email }}</p>
+    </div>
+
+    
+    
+    <div class="prescriptions-list">
+      <h2>{{ 'PRESCRIPTIONS.PRESCRIPTIONS' | translate }}</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <td>{{ 'MEDICINES.TITLE' | translate }}</td>
+            <td>{{ 'PRESCRIPTIONS.DOSE' | translate }}</td>
+            <td>{{ 'PRESCRIPTIONS.TIMES' | translate }}</td>
+            <td>{{ 'PRESCRIPTIONS.START' | translate }}</td>
+            <td>{{ 'PRESCRIPTIONS.END' | translate }}</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let prescription of prescriptions">
+            <td>{{ prescription.medicine?.title }}</td>
+            <td>{{ prescription.dose }}</td>
+            <td>{{ prescription.timesPerDay }}</td>
+            <td>{{ prescription.prescriptionDateStart | date:'dd.MM.yyyy' }}</td>
+            <td>{{ prescription.prescriptionDateEnd | date:'dd.MM.yyyy' }}</td>
+            <td>
+              <svg (click)="deletePrescription(prescription.id)" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                <path
+                  d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
+              </svg>
+            </td>
+            <td>
+              <span class="more-info" (click)="selectPrescription(prescription.id)">{{ 'PRESCRIPTIONS.MOREINFO' | translate }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button (click)="openDialog()">{{ 'PRESCRIPTIONS.ADD' | translate }}</button>
+    </div>
+  </div>
+</div>

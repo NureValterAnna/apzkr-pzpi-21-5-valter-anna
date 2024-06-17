@@ -1,0 +1,8 @@
+namespace Application.Users.Commands;
+
+public record LoginCommand
+{
+    public string Email { get; set; }
+
+    public string Password { get; set; }
+}

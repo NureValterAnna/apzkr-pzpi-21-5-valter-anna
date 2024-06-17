@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="card">
+      <h1>Update User Role</h1>
+          <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+
+            <select id="role" formControlName="role">
+              <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+            </select>
+            
+              <button type="submit" [disabled]="createForm.invalid">Submit</button>
+          </form>
+    </div>
+  </div>
+  

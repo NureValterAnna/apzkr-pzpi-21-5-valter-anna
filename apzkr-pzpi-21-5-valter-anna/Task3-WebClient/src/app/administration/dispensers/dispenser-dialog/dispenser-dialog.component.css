@@ -1,0 +1,60 @@
+@import 'src/styles.css';
+
+.container {
+  margin: 20px;
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid var(--secondary-20-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--secondary-30-color);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+h1 {
+  color: var(--text-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  border: 1px solid var(--secondary-20-color);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:disabled {
+  background-color: var(--primary-20-color);
+  cursor: not-allowed;
+}
+
+div {
+  color: var(--danger-color);
+  font-size: 12px;
+  margin-top: 5px;
+}

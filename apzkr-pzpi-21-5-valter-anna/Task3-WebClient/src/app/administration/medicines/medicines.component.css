@@ -1,0 +1,53 @@
+@import 'src/styles.css';
+
+.container {
+    margin: 20px;
+  }
+  
+  table {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  thead {
+    background-color: var(--primary-20-color);
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: var(--background-color);
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: var(--secondary-20-color);
+  }
+  
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .svg {
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  
+  .create-btn {
+    margin-top: 20px; 
+    background-color: var(--secondary-20-color);
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
